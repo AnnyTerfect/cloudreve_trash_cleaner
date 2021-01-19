@@ -1,0 +1,13 @@
+[Unit]
+Description=Cloudreve Trashes Auto Cleaner
+After=network.target
+
+[Service]
+Type=simple
+User=annyterfect
+Restart=on-failure
+RestartSec=5s
+ExecStart=/home/annyterfect/cloudreve/clean_trash.py --work_dir=/home/annyterfect/cloudreve/
+
+[Install]
+WantedBy=multi-user.target
